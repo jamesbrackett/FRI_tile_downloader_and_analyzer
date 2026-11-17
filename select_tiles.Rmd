@@ -33,5 +33,3 @@ mapview(tiles_of_interest["Download_L"], col.regions = "blue", legend = FALSE) +
 ```{r}
 st_write(tiles_of_interest, "data/input/tile_indices_of_interest.gpkg", delete_dsn = TRUE)
 ```
-
-```
