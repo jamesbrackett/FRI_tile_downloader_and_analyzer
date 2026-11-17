@@ -1,22 +1,37 @@
 ---
-title: "select_tiles
+title: "select_tiles"
 output: html_notebook
 ---
 
 ```{r}
 library(sf)
+library(dplyr)
+library(mapview)
 ```
 
 ```{r}
-area_of_interest <- st_read(
-  "data/raw/Ecodistricts_and_Missanaibi/ecodistricts_and_missinaibi_shapefile.shp"
-)
+crs_out <- 3162
 
-all_tiles <- st_read(
-  "data/raw/FRI_Leaf_On_Tile_Index_SHP/FRI_Tile_Footprint.shp"
-)
+area_of_interest <- st_read("data/raw/Ecodistricts_and_Missanaibi/ecodistricts_and_missinaibi_shapefile.shp") |>
+  st_transform(crs_out) |>
+  st_cast("POLYGON")
+
+all_tiles <- st_read("data/raw/FRI_Leaf_On_Tile_Index_SHP/FRI_Tile_Index.shp") |>
+  st_transform(crs_out) |>
+  st_cast("POLYGON")
 ```
 
 ```{r}
+tiles_of_interest <- st_filter(all_tiles, area_of_interest)
+```
+
+```{r}
+mapview(tiles_of_interest["Download_L"], col.regions = "blue", legend = FALSE) +
+  mapview(area_of_interest, legend = FALSE)
+```
+
+```{r}
+st_write(tiles_of_interest, "data/input/tile_indices_of_interest.gpkg", delete_dsn = TRUE)
+```
 
 ```
