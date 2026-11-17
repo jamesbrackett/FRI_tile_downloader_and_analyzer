@@ -1,0 +1,22 @@
+---
+title: "select_tiles
+output: html_notebook
+---
+
+```{r}
+library(sf)
+```
+
+```{r}
+area_of_interest <- st_read(
+  "data/raw/Ecodistricts_and_Missanaibi/ecodistricts_and_missinaibi_shapefile.shp"
+)
+
+all_tiles <- st_read(
+  "data/raw/FRI_Leaf_On_Tile_Index_SHP/FRI_Tile_Footprint.shp"
+)
+```
+
+```{r}
+
+```
