@@ -11,7 +11,7 @@
 
 
 
-<title>R Notebook</title>
+<title>select_tiles</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,39 +1746,96 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">R Notebook</h1>
+<h1 class="title toc-ignore">select_tiles</h1>
 
 </div>
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a>
-Notebook. When you execute code within the notebook, the results appear
-beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within
-the chunk or by placing your cursor inside it and pressing
-<em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVjR3h2ZENoallYSnpLVnh1WUdCZ0luMD0gLS0+XG5cbmBgYHJcbnBsb3QoY2FycylcbmBgYFxuXG48IS0tIHJuYi1zb3VyY2UtZW5kIC0tPlxuIn0= -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUF0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMWNiaU1nYzJWc1pXTjBYM1JwYkdWekxsSnRaRnh1SXlCY2JpTWdVSFZ5Y0c5elpUb2dJQ0FnSUZObGJHVmpkQ0JHVWtrZ1UxQk1JRXhwUkVGU0lIUnBiR1Z6SUhSb1lYUWdhVzUwWlhKelpXTjBJSFJvWlNCaGNtVmhJRzltSUdsdWRHVnlaWE4wSUZ4dUl5QWdJQ0FnSUNBZ0lDQWdJQ0FnS0dWamIyUnBjM1J5YVdOMGN5QXJJRTFwYzNOcGJtRnBZbWtnUmsxVktTQmhZbVFnYzJGMlpTQjBhR1Z0SUdGeklHRWdZMnhwY0hCbFpDQjBhV3hsSUZ4dUl5QWdJQ0FnSUNBZ0lDQWdJQ0FnYVc1a1pYZ3VYRzRqWEc0aklFRjFkR2h2Y2pvZ0lDQWdJQ0JLWVcxbGN5QkNjbUZqYTJWMGRGeHVJMXh1SXlCRGNtVmhkR1ZrT2lBZ0lDQWdNakF5TmkweE1TMHhObHh1SXlCTVlYTjBJRVZrYVhSbFpEb2dNakF5TmkweE1TMHhOMXh1SXlBdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzB0TFMwdExTMHRMUzFjYm1CZ1lDSjkgLS0+XG5cbmBgYHJcbiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4jIHNlbGVjdF90aWxlcy5SbWRcbiMgXG4jIFB1cnBvc2U6ICAgICBTZWxlY3QgRlJJIFNQTCBMaURBUiB0aWxlcyB0aGF0IGludGVyc2VjdCB0aGUgYXJlYSBvZiBpbnRlcmVzdCBcbiMgICAgICAgICAgICAgIChlY29kaXN0cmljdHMgKyBNaXNzaW5haWJpIEZNVSkgYWJkIHNhdmUgdGhlbSBhcyBhIGNsaXBwZWQgdGlsZSBcbiMgICAgICAgICAgICAgIGluZGV4LlxuI1xuIyBBdXRob3I6ICAgICAgSmFtZXMgQnJhY2tldHRcbiNcbiMgQ3JlYXRlZDogICAgIDIwMjYtMTEtMTZcbiMgTGFzdCBFZGl0ZWQ6IDIwMjYtMTEtMTdcbiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiMgc2VsZWN0X3RpbGVzLlJtZFxuIyBcbiMgUHVycG9zZTogICAgIFNlbGVjdCBGUkkgU1BMIExpREFSIHRpbGVzIHRoYXQgaW50ZXJzZWN0IHRoZSBhcmVhIG9mIGludGVyZXN0IFxuIyAgICAgICAgICAgICAgKGVjb2Rpc3RyaWN0cyArIE1pc3NpbmFpYmkgRk1VKSBhYmQgc2F2ZSB0aGVtIGFzIGEgY2xpcHBlZCB0aWxlIFxuIyAgICAgICAgICAgICAgaW5kZXguXG4jXG4jIEF1dGhvcjogICAgICBKYW1lcyBCcmFja2V0dFxuI1xuIyBDcmVhdGVkOiAgICAgMjAyNi0xMS0xNlxuIyBMYXN0IEVkaXRlZDogMjAyNi0xMS0xN1xuIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbmBgYCJ9 -->
+<pre class="r"><code># ------------------------------------------------------------------------------
+# select_tiles.Rmd
+# 
+# Purpose:     Select FRI SPL LiDAR tiles that intersect the area of interest 
+#              (ecodistricts + Missinaibi FMU) abd save them as a clipped tile 
+#              index.
+#
+# Author:      James Brackett
+#
+# Created:     2026-11-16
+# Last Edited: 2026-11-17
+# ------------------------------------------------------------------------------</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the
-toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and
-output will be saved alongside it (click the <em>Preview</em> button or
-press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the
-editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not
-run any R code chunks. Instead, the output of the chunk when it was last
-run in the editor is displayed.</p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUJwYm5OMFlXeHNJSEJoWTJ0aFoyVnpYRzVzYVdKeVlYSjVLSE5tS1Z4dWJHbGljbUZ5ZVNoa2NHeDVjaWxjYm14cFluSmhjbmtvYldGd2RtbGxkeWxjYm1CZ1lDSjkgLS0+XG5cbmBgYHJcbiMgaW5zdGFsbCBwYWNrYWdlc1xubGlicmFyeShzZilcbmxpYnJhcnkoZHBseXIpXG5saWJyYXJ5KG1hcHZpZXcpXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBpbnN0YWxsIHBhY2thZ2VzXG5saWJyYXJ5KHNmKVxubGlicmFyeShkcGx5cilcbmxpYnJhcnkobWFwdmlldylcbmBgYCJ9 -->
+<pre class="r"><code># install packages
+library(sf)
+library(dplyr)
+library(mapview)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUJ6WlhRZ2RHRnlaMlYwSUdOeWMxeHVZM0p6WDI5MWRDQThMU0F6TVRZeVhHNWNiaU1nY21WaFpDQnphR0Z3WldacGJHVWdaR1ZtYVc1cGJtY2dZWEpsWVNCMGJ5QnlaWFJoYVc1Y2JtRnlaV0ZmYjJaZmFXNTBaWEpsYzNRZ1BDMGdjM1JmY21WaFpDaGNJbVJoZEdFdmNtRjNMMFZqYjJScGMzUnlhV04wYzE5aGJtUmZUV2x6YzJGdVlXbGlhUzlsWTI5a2FYTjBjbWxqZEhOZllXNWtYMjFwYzNOcGJtRnBZbWxmYzJoaGNHVm1hV3hsTG5Ob2NGd2lLU0I4UGx4dUlDQnpkRjkwY21GdWMyWnZjbTBvWTNKelgyOTFkQ2tnZkQ1Y2JpQWdjM1JmWTJGemRDaGNJbEJQVEZsSFQwNWNJaWxjYmx4dUl5QnlaV0ZrSUhOb1lYQmxabWxzWlNCdlppQjBhR1VnZEdsc1pTQnBibVJsZUZ4dVlXeHNYM1JwYkdWeklEd3RJSE4wWDNKbFlXUW9YQ0prWVhSaEwzSmhkeTlHVWtsZlRHVmhabDlQYmw5VWFXeGxYMGx1WkdWNFgxTklVQzlHVWtsZlZHbHNaVjlKYm1SbGVDNXphSEJjSWlrZ2ZENWNiaUFnYzNSZmRISmhibk5tYjNKdEtHTnljMTl2ZFhRcElIdytYRzRnSUhOMFgyTmhjM1FvWENKUVQweFpSMDlPWENJcFhHNWdZR0FpZlE9PSAtLT5cblxuYGBgclxuIyBzZXQgdGFyZ2V0IGNyc1xuY3JzX291dCA8LSAzMTYyXG5cbiMgcmVhZCBzaGFwZWZpbGUgZGVmaW5pbmcgYXJlYSB0byByZXRhaW5cbmFyZWFfb2ZfaW50ZXJlc3QgPC0gc3RfcmVhZChcImRhdGEvcmF3L0Vjb2Rpc3RyaWN0c19hbmRfTWlzc2FuYWliaS9lY29kaXN0cmljdHNfYW5kX21pc3NpbmFpYmlfc2hhcGVmaWxlLnNocFwiKSB8PlxuICBzdF90cmFuc2Zvcm0oY3JzX291dCkgfD5cbiAgc3RfY2FzdChcIlBPTFlHT05cIilcblxuIyByZWFkIHNoYXBlZmlsZSBvZiB0aGUgdGlsZSBpbmRleFxuYWxsX3RpbGVzIDwtIHN0X3JlYWQoXCJkYXRhL3Jhdy9GUklfTGVhZl9Pbl9UaWxlX0luZGV4X1NIUC9GUklfVGlsZV9JbmRleC5zaHBcIikgfD5cbiAgc3RfdHJhbnNmb3JtKGNyc19vdXQpIHw+XG4gIHN0X2Nhc3QoXCJQT0xZR09OXCIpXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzZXQgdGFyZ2V0IGNyc1xuY3JzX291dCA8LSAzMTYyXG5cbiMgcmVhZCBzaGFwZWZpbGUgZGVmaW5pbmcgYXJlYSB0byByZXRhaW5cbmFyZWFfb2ZfaW50ZXJlc3QgPC0gc3RfcmVhZChcImRhdGEvcmF3L0Vjb2Rpc3RyaWN0c19hbmRfTWlzc2FuYWliaS9lY29kaXN0cmljdHNfYW5kX21pc3NpbmFpYmlfc2hhcGVmaWxlLnNocFwiKSB8PlxuICBzdF90cmFuc2Zvcm0oY3JzX291dCkgfD5cbiAgc3RfY2FzdChcIlBPTFlHT05cIilcblxuIyByZWFkIHNoYXBlZmlsZSBvZiB0aGUgdGlsZSBpbmRleFxuYWxsX3RpbGVzIDwtIHN0X3JlYWQoXCJkYXRhL3Jhdy9GUklfTGVhZl9Pbl9UaWxlX0luZGV4X1NIUC9GUklfVGlsZV9JbmRleC5zaHBcIikgfD5cbiAgc3RfdHJhbnNmb3JtKGNyc19vdXQpIHw+XG4gIHN0X2Nhc3QoXCJQT0xZR09OXCIpXG5gYGAifQ== -->
+<pre class="r"><code># set target crs
+crs_out &lt;- 3162
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+# read shapefile defining area to retain
+area_of_interest &lt;- st_read(&quot;data/raw/Ecodistricts_and_Missanaibi/ecodistricts_and_missinaibi_shapefile.shp&quot;) |&gt;
+  st_transform(crs_out) |&gt;
+  st_cast(&quot;POLYGON&quot;)
+
+# read shapefile of the tile index
+all_tiles &lt;- st_read(&quot;data/raw/FRI_Leaf_On_Tile_Index_SHP/FRI_Tile_Index.shp&quot;) |&gt;
+  st_transform(crs_out) |&gt;
+  st_cast(&quot;POLYGON&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUJ5WlcxdmRtVWdkR2xzWlhNZ2RHaGhkQ0JrYnlCdWIzUWdhVzUwWlhKelpXTjBJSGRwZEdnZ1lYSmxZU0J2WmlCcGJuUmxjbVZ6ZEZ4dWRHbHNaWE5mYjJaZmFXNTBaWEpsYzNRZ1BDMGdjM1JmWm1sc2RHVnlLR0ZzYkY5MGFXeGxjeXdnWVhKbFlWOXZabDlwYm5SbGNtVnpkQ2xjYm1CZ1lDSjkgLS0+XG5cbmBgYHJcbiMgcmVtb3ZlIHRpbGVzIHRoYXQgZG8gbm90IGludGVyc2VjdCB3aXRoIGFyZWEgb2YgaW50ZXJlc3RcbnRpbGVzX29mX2ludGVyZXN0IDwtIHN0X2ZpbHRlcihhbGxfdGlsZXMsIGFyZWFfb2ZfaW50ZXJlc3QpXG5gYGBcblxuPCEtLSBybmItc291cmNlLWVuZCAtLT5cbiJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyByZW1vdmUgdGlsZXMgdGhhdCBkbyBub3QgaW50ZXJzZWN0IHdpdGggYXJlYSBvZiBpbnRlcmVzdFxudGlsZXNfb2ZfaW50ZXJlc3QgPC0gc3RfZmlsdGVyKGFsbF90aWxlcywgYXJlYV9vZl9pbnRlcmVzdClcbmBgYCJ9 -->
+<pre class="r"><code># remove tiles that do not intersect with area of interest
+tiles_of_interest &lt;- st_filter(all_tiles, area_of_interest)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUJrYVhOd2JHRjVJR1pwYkhSbGNtVmtJR052Ykd4bFkzUnBiMjRnYjJZZ2RHbHNaWE5jYm0xaGNIWnBaWGNvZEdsc1pYTmZiMlpmYVc1MFpYSmxjM1JiWENKRWIzZHViRzloWkY5TVhDSmRMQ0JqYjJ3dWNtVm5hVzl1Y3lBOUlGd2lZbXgxWlZ3aUxDQnNaV2RsYm1RZ1BTQkdRVXhUUlNrZ0sxeHVJQ0J0WVhCMmFXVjNLR0Z5WldGZmIyWmZhVzUwWlhKbGMzUXNJR3hsWjJWdVpDQTlJRVpCVEZORktWeHVZR0JnSW4wPSAtLT5cblxuYGBgclxuIyBkaXNwbGF5IGZpbHRlcmVkIGNvbGxlY3Rpb24gb2YgdGlsZXNcbm1hcHZpZXcodGlsZXNfb2ZfaW50ZXJlc3RbXCJEb3dubG9hZF9MXCJdLCBjb2wucmVnaW9ucyA9IFwiYmx1ZVwiLCBsZWdlbmQgPSBGQUxTRSkgK1xuICBtYXB2aWV3KGFyZWFfb2ZfaW50ZXJlc3QsIGxlZ2VuZCA9IEZBTFNFKVxuYGBgXG5cbjwhLS0gcm5iLXNvdXJjZS1lbmQgLS0+XG4ifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBkaXNwbGF5IGZpbHRlcmVkIGNvbGxlY3Rpb24gb2YgdGlsZXNcbm1hcHZpZXcodGlsZXNfb2ZfaW50ZXJlc3RbXCJEb3dubG9hZF9MXCJdLCBjb2wucmVnaW9ucyA9IFwiYmx1ZVwiLCBsZWdlbmQgPSBGQUxTRSkgK1xuICBtYXB2aWV3KGFyZWFfb2ZfaW50ZXJlc3QsIGxlZ2VuZCA9IEZBTFNFKVxuYGBgIn0= -->
+<pre class="r"><code># display filtered collection of tiles
+mapview(tiles_of_interest[&quot;Download_L&quot;], col.regions = &quot;blue&quot;, legend = FALSE) +
+  mapview(area_of_interest, legend = FALSE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVJeUJ6WVhabElHWnBiSFJsY21Wa0lHTnZiR3hsWTNScGIyNGdiMllnZEdsc1pYTWdkRzhnWVNCblpXOXdZV05yWVdkbFhHNXpkRjkzY21sMFpTaDBhV3hsYzE5dlpsOXBiblJsY21WemRDd2dYQ0prWVhSaEwybHVjSFYwTDNScGJHVmZhVzVrYVdObGMxOXZabDlwYm5SbGNtVnpkQzVuY0d0blhDSXNJR1JsYkdWMFpWOWtjMjRnUFNCVVVsVkZLVnh1WUdCZ0luMD0gLS0+XG5cbmBgYHJcbiMgc2F2ZSBmaWx0ZXJlZCBjb2xsZWN0aW9uIG9mIHRpbGVzIHRvIGEgZ2VvcGFja2FnZVxuc3Rfd3JpdGUodGlsZXNfb2ZfaW50ZXJlc3QsIFwiZGF0YS9pbnB1dC90aWxlX2luZGljZXNfb2ZfaW50ZXJlc3QuZ3BrZ1wiLCBkZWxldGVfZHNuID0gVFJVRSlcbmBgYFxuXG48IS0tIHJuYi1zb3VyY2UtZW5kIC0tPlxuIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzYXZlIGZpbHRlcmVkIGNvbGxlY3Rpb24gb2YgdGlsZXMgdG8gYSBnZW9wYWNrYWdlXG5zdF93cml0ZSh0aWxlc19vZl9pbnRlcmVzdCwgXCJkYXRhL2lucHV0L3RpbGVfaW5kaWNlc19vZl9pbnRlcmVzdC5ncGtnXCIsIGRlbGV0ZV9kc24gPSBUUlVFKVxuYGBgIn0= -->
+<pre class="r"><code># save filtered collection of tiles to a geopackage
+st_write(tiles_of_interest, &quot;data/input/tile_indices_of_interest.gpkg&quot;, delete_dsn = TRUE)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tDQp0aXRsZTogInNlbGVjdF90aWxlcyINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQpgYGB7cn0NCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQojIHNlbGVjdF90aWxlcy5SbWQNCiMgDQojIFB1cnBvc2U6ICAgICBTZWxlY3QgRlJJIFNQTCBMaURBUiB0aWxlcyB0aGF0IGludGVyc2VjdCB0aGUgYXJlYSBvZiBpbnRlcmVzdCANCiMgICAgICAgICAgICAgIChlY29kaXN0cmljdHMgKyBNaXNzaW5haWJpIEZNVSkgYWJkIHNhdmUgdGhlbSBhcyBhIGNsaXBwZWQgdGlsZSANCiMgICAgICAgICAgICAgIGluZGV4Lg0KIw0KIyBBdXRob3I6ICAgICAgSmFtZXMgQnJhY2tldHQNCiMNCiMgQ3JlYXRlZDogICAgIDIwMjYtMTEtMTYNCiMgTGFzdCBFZGl0ZWQ6IDIwMjYtMTEtMTcNCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tDQpgYGANCg0KYGBge3J9DQojIGluc3RhbGwgcGFja2FnZXMNCmxpYnJhcnkoc2YpDQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeShtYXB2aWV3KQ0KYGBgDQoNCmBgYHtyfQ0KIyBzZXQgdGFyZ2V0IGNycw0KY3JzX291dCA8LSAzMTYyDQoNCiMgcmVhZCBzaGFwZWZpbGUgZGVmaW5pbmcgYXJlYSB0byByZXRhaW4NCmFyZWFfb2ZfaW50ZXJlc3QgPC0gc3RfcmVhZCgiZGF0YS9yYXcvRWNvZGlzdHJpY3RzX2FuZF9NaXNzYW5haWJpL2Vjb2Rpc3RyaWN0c19hbmRfbWlzc2luYWliaV9zaGFwZWZpbGUuc2hwIikgfD4NCiAgc3RfdHJhbnNmb3JtKGNyc19vdXQpIHw+DQogIHN0X2Nhc3QoIlBPTFlHT04iKQ0KDQojIHJlYWQgc2hhcGVmaWxlIG9mIHRoZSB0aWxlIGluZGV4DQphbGxfdGlsZXMgPC0gc3RfcmVhZCgiZGF0YS9yYXcvRlJJX0xlYWZfT25fVGlsZV9JbmRleF9TSFAvRlJJX1RpbGVfSW5kZXguc2hwIikgfD4NCiAgc3RfdHJhbnNmb3JtKGNyc19vdXQpIHw+DQogIHN0X2Nhc3QoIlBPTFlHT04iKQ0KYGBgDQoNCmBgYHtyfQ0KIyByZW1vdmUgdGlsZXMgdGhhdCBkbyBub3QgaW50ZXJzZWN0IHdpdGggYXJlYSBvZiBpbnRlcmVzdA0KdGlsZXNfb2ZfaW50ZXJlc3QgPC0gc3RfZmlsdGVyKGFsbF90aWxlcywgYXJlYV9vZl9pbnRlcmVzdCkNCmBgYA0KDQpgYGB7cn0NCiMgZGlzcGxheSBmaWx0ZXJlZCBjb2xsZWN0aW9uIG9mIHRpbGVzDQptYXB2aWV3KHRpbGVzX29mX2ludGVyZXN0WyJEb3dubG9hZF9MIl0sIGNvbC5yZWdpb25zID0gImJsdWUiLCBsZWdlbmQgPSBGQUxTRSkgKw0KICBtYXB2aWV3KGFyZWFfb2ZfaW50ZXJlc3QsIGxlZ2VuZCA9IEZBTFNFKQ0KYGBgDQoNCmBgYHtyfQ0KIyBzYXZlIGZpbHRlcmVkIGNvbGxlY3Rpb24gb2YgdGlsZXMgdG8gYSBnZW9wYWNrYWdlDQpzdF93cml0ZSh0aWxlc19vZl9pbnRlcmVzdCwgImRhdGEvaW5wdXQvdGlsZV9pbmRpY2VzX29mX2ludGVyZXN0Lmdwa2ciLCBkZWxldGVfZHNuID0gVFJVRSkNCmBgYA==</div>
 
 
 

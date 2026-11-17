@@ -2,6 +2,20 @@
 title: "select_tiles"
 output: html_notebook
 ---
+```{r}
+# ------------------------------------------------------------------------------
+# select_tiles.Rmd
+# 
+# Purpose:     Select FRI SPL LiDAR tiles that intersect the area of interest 
+#              (ecodistricts + Missinaibi FMU) abd save them as a clipped tile 
+#              index.
+#
+# Author:      James Brackett
+#
+# Created:     2026-11-16
+# Last Edited: 2026-11-17
+# ------------------------------------------------------------------------------
+```
 
 ```{r}
 # install packages
