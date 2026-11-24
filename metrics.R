@@ -10,6 +10,6 @@
 # Last Edited: 2026-11-18
 #-------------------------------------------------------------------------------
 
-metric_formulas < list(
+metric_formulas <- list(
   P95 = ~list(P95 = quantile(Z, 0.95))
 )
