@@ -1,8 +1,3 @@
----
-title: "select_tiles"
-output: html_notebook
----
-```{r}
 # ------------------------------------------------------------------------------
 # select_tiles.Rmd
 # 
@@ -15,16 +10,12 @@ output: html_notebook
 # Created:     2026-11-16
 # Last Edited: 2026-11-17
 # ------------------------------------------------------------------------------
-```
 
-```{r}
 # install packages
 library(sf)
 library(dplyr)
 library(mapview)
-```
 
-```{r}
 # set target crs
 crs_out <- 3162
 
@@ -37,20 +28,13 @@ area_of_interest <- st_read("data/raw/Ecodistricts_and_Missanaibi/ecodistricts_a
 all_tiles <- st_read("data/raw/FRI_Leaf_On_Tile_Index_SHP/FRI_Tile_Index.shp") |>
   st_transform(crs_out) |>
   st_cast("POLYGON")
-```
 
-```{r}
 # remove tiles that do not intersect with area of interest
 tiles_of_interest <- st_filter(all_tiles, area_of_interest)
-```
 
-```{r}
 # display filtered collection of tiles
 mapview(tiles_of_interest["Download_L"], col.regions = "blue", legend = FALSE) +
   mapview(area_of_interest, legend = FALSE)
-```
 
-```{r}
 # save filtered collection of tiles to a geopackage
 st_write(tiles_of_interest, "data/input/tile_indices_of_interest.gpkg", delete_dsn = TRUE)
-```
