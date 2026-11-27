@@ -96,6 +96,7 @@ process_tile <- function(i) {
     for (metric in missing_metrics){
       metric_raster <- pixel_metrics(las, metric_formulas[[metric]], res = resolution)
       metric_raster <- crop(metric_raster, ext(las))
+      metric_raster <- ifel(is.na(metric_raster), 0, metric_raster)
       writeRaster(metric_raster, output_paths[metric], overwrite = TRUE)
     }
     
@@ -116,7 +117,7 @@ process_tile <- function(i) {
 # use simple text bar to display progress
 handlers("txtprogressbar")
 # set how many workers to use
-plan(multisession, workers = 8)
+plan(multisession, workers = 2)
 
 # determine the number of tiles needed to be processed
 indices <- seq_len(nrow(tiles_table))
